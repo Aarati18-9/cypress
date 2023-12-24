@@ -24,8 +24,6 @@ describe ('todo',()=>{
     })
     xit('for active',()=>{
         
-        cy.get(':nth-child(2) > a').click()
-        // cy.get('.todo-list').find()
 
     })
     xit('for completed',()=>{
