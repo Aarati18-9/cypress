@@ -22,11 +22,12 @@ describe ('todo',()=>{
         cy.get('.todo-list').contains("Eat").should('not.exist');
         
     })
-    xit('for active',()=>{
-        
+    it('for active',()=>{
+        cy.get('.todo-list li:not(.completed)').should('have.length', 5);
 
     })
-    xit('for completed',()=>{
-        cy.get(':nth-child(3) > a').click()
+    it('for completed',()=>{
+        cy.get(':nth-child(1) > .view > .toggle').check().should('be.checked')
+        cy.get('.todo-list li.completed').should('have.length', 1);
     })
 })
